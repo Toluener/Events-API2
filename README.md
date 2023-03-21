@@ -11,10 +11,10 @@ Generate reports for each event with information about attendee count etc.
 
 As an admin, I want to be able to approve or reject events created  by users. If an event is rejected, the admin should provide a reason for the rejection, which will be sent to the user via email. I should be able to:
 
-i. Log in to the platform.
-ii. Approve or reject events.
-iii. Delete events that are no longer needed.
-iv. View a list of all the registered attendees for each event.
+i) Log in to the platform.
+ii) Approve or reject events.
+iii) Delete events that are no longer needed.
+iv)  View a list of all the registered attendees for each event.
 
 
 
