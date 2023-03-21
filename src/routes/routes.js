@@ -35,7 +35,7 @@ app.get('/event/:id', auth, authUserAdmin, async (req, res) =>
     await eventModel.findById(req.params.id);
 try {
     Populate(req.params.id, 'attendees').then(async function(result){
-        res.status(200).json(result);
+        res.status(200).json(`${result} \n Your Attendee count is ${result.attendees.length}`);
     })}
  catch(error){res.status(500).send(error);}
 });
@@ -97,8 +97,8 @@ app.patch('/event/:id', auth, authUser, async (req, res) => {
         if(!event){ res.status(404).send("Event not found");}
     
     else if(event && !req.body.attendees){
-        await eventModel.findByIdAndUpdate(req.params.id, req.body, {new: true});
-                res.status(200).send(`event updated:\n \n ${event}`);}
+       const Event = await eventModel.findByIdAndUpdate(req.params.id, req.body, {new: true});
+                res.status(200).send(`event updated:\n \n ${Event}`);}
     else{res.status(400).send('Note: You cannot update attendees on this route');}            
     }
 catch(error){res.status(500).send(error);}
