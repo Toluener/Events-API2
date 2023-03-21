@@ -14,7 +14,7 @@ The Events API caters for the user demands as described above, see the API docum
 
 
 
-Render link: https://events-api-toluener.onrender.com
+Render link: https://events-api2.onrender.com
 
 Mailtrap login { email: lulachan52@gmail.com
                 password: lulachan@52 }
