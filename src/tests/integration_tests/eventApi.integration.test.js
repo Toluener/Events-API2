@@ -69,24 +69,6 @@ describe("test for getting an event", () =>{
 });
 
 
-describe("test for getting an event", () =>{
-    it('Create a new event', async() =>{
-        const {body, statusCode} = await request(app).post("/event").set(
-            'token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQxOGM3MTQ2MDg5ZmJiYmRkNmNjZjkxIn0sImlhdCI6MTY3OTM5NjE5MiwiZXhwIjoxNjc5Mzk5NzkyfQ.Jp-AKcfLnEGd5WbJwn8mA8ojqmWP5q_J1uVLWLtJTy4'
-        ).send({
-            user: "6418d35bbde5b45882e8a774",
-    eventname: "Painting event",
-    date: "2023-04-09",
-    time: "morning",
-    location: "Mount Olympus",
-    description: "A Painting event",
-    attendees: ["6641627de28cc24805b88fb46"]
-        });
-        expect(statusCode).toBe(200); 
-        console.log(body);
-    }, 1000000);
-});
-
 
 describe("test for creating the attendee", () =>{
     it('should create an attendee', async() =>{
