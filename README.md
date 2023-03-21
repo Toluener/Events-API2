@@ -17,7 +17,7 @@ The Events API caters for the user demands as described above, see the API docum
 Render link: https://events-api-toluener.onrender.com
 
 Mailtrap login { email: lulachan52@gmail.com
-                password: Ladylulachan52 }
+                password: lulachan@52 }
                 
                 
 Events API documentation: https://documenter.getpostman.com/view/24385383/2s93JwMgYL 
