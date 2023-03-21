@@ -35,7 +35,7 @@ app.get('/event/:id', auth, authUserAdmin, async (req, res) =>
     await eventModel.findById(req.params.id);
 try {
     Populate(req.params.id, 'attendees').then(async function(result){
-        res.status(200).json(`${result} \n Your Attendee count is ${result.attendees.length}`);
+        res.status(200).send(`${result}, \n Your Attendee count is ${result.attendees.length}`);
     })}
  catch(error){res.status(500).send(error);}
 });
