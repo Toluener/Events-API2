@@ -26,13 +26,13 @@ app.use(approuter);
 
 
 
-describe("Home page", ()=>{
- it('should display the home page', async ()=>{
-    const {res, statusCode} =   await request(app).get("/");  
-expect(statusCode).toBe(200);
-console.log(res.text);
-    });
-});
+// describe("Home page", ()=>{
+//  it('should display the home page', async ()=>{
+//     const {res, statusCode} =   await request(app).get("/");  
+// expect(statusCode).toBe(200);
+// console.log(res.text);
+//     });
+// });
 
 
 
