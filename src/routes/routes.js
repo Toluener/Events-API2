@@ -154,18 +154,18 @@ app.delete('/event/:id', auth, authUserAdmin, async (req, res) => {
         else if(event&&req.body.reason&&req.body.title){
 
            doublePopulate(req.params.id, 'user', 'attendees').then( async function(result){
-            
+
+                await eventModel.findByIdAndDelete(req.params.id);
+
         const subject ='Event';
         const message2 = `Please take note that the event: ${result.eventname}, you were added to has now been deleted`;    
         const message = `The event: ${result.id}, ${result.eventname}, has been deleted by the ${req.body.title}.
-        \n Reason: ${req.body.reason}`
+        \n Reason: ${req.body.reason}`;
 
-            email(result.user.email, subject, message);
-
-            for(i =0; i < result.attendees.length; i++){
+        for(i =0; i < result.attendees.length; i++){
             email(result.attendees[i].email, subject, message2);
             }
-            await eventModel.findByIdAndDelete(req.params.id);
+            email(result.user.email, subject, message);
            });
 
     res.status(200).send('The event has been deleted'); 
