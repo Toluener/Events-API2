@@ -27,10 +27,6 @@ Please checkout the API documentation for more details. Thank you for using Even
 
 
 
-Render link: https://events-api2.onrender.com
-
-Mailtrap login { email: lulachan52@gmail.com
-                password: lulachan@52 }
-                
+Render link: https://events-api2.onrender.com          
                 
 Events API documentation: https://documenter.getpostman.com/view/24385383/2s93RKzvUR
